@@ -1,0 +1,13 @@
+server:
+  port: 8761
+
+management:
+  context_path: /admin
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+  instance:
+    status-page-url-path: ${management.context-path}/info
+    health-check-url-path: ${management.context-path}/health
